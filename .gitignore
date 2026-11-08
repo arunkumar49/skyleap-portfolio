@@ -1,0 +1,88 @@
+# =============================================================================
+# skyleap-portfolio: React (Vite) frontend, FastAPI backend, Python MCP server
+# Patterns are unanchored so they apply in every sub-project folder.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Secrets and environment files (guide §3, §7.8, §8.6, §10.4)
+# Keep the documented templates (.env.example) tracked.
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.secrets/
+
+# -----------------------------------------------------------------------------
+# AWS SAM / deployment (guide §9)
+# samconfig.toml is intentionally tracked (holds ARNs and names, no secrets).
+# -----------------------------------------------------------------------------
+.aws-sam/
+packaged*.yaml
+# Bedrock smoke-test output from guide §2.2
+out.json
+
+# -----------------------------------------------------------------------------
+# Python: FastAPI backend, ingestion, MCP server
+# uv.lock / poetry.lock are intentionally tracked.
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+build/
+pip-wheel-metadata/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# -----------------------------------------------------------------------------
+# Node / React (Vite) frontend
+# package-lock.json is intentionally tracked.
+# -----------------------------------------------------------------------------
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------------------------------------------------------
+# Logs and temp files
+# -----------------------------------------------------------------------------
+*.log
+logs/
+tmp/
+*.tmp
+
+# -----------------------------------------------------------------------------
+# Editors, OS, and local tooling
+# -----------------------------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Claude Code personal settings (shared .claude/settings.json stays tracked)
+.claude/settings.local.json
