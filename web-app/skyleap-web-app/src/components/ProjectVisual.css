@@ -1,0 +1,83 @@
+.pv-frame {
+  height: 220px;
+  background: var(--surface-muted);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--text-2);
+}
+
+.pv--flow {
+  gap: 10px;
+}
+
+.pv--layers {
+  gap: 12px;
+}
+
+.pv-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.pv-row--indent-1 {
+  padding-left: 48px;
+}
+
+.pv-row--indent-2 {
+  padding-left: 96px;
+}
+
+@media (max-width: 420px) {
+  .pv-row--indent-1 {
+    padding-left: 16px;
+  }
+
+  .pv-row--indent-2 {
+    padding-left: 32px;
+  }
+}
+
+.pv-box {
+  padding: 6px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.pv-box--plain {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+}
+
+.pv-box--strong {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+}
+
+.pv-box--solid {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.pv-label {
+  width: 44px;
+  color: var(--muted);
+}
+
+.pv-divider {
+  height: 1px;
+  background: var(--divider);
+}

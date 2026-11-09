@@ -1,0 +1,79 @@
+/*
+ * Design tokens taken from design/mockups/*.dc.html.
+ * Light = "Cool mist" palette, dark = "Graphite" palette.
+ */
+:root {
+  /* Surfaces */
+  --bg: #f4f6fa;
+  --nav-bg: rgba(244, 246, 250, 0.94);
+  --surface: #ffffff;
+  --surface-muted: #e9edf2;
+  --border: #dde2e8;
+  --border-strong: #828a94;
+  --rule: #1a1d1f;
+  --divider: #b8c0ca;
+
+  /* Text */
+  --text: #1a1d1f;
+  --text-2: #4a4f52;
+  --muted: #6a6f70;
+
+  /* Actions */
+  --primary: #1a1d1f;
+  --on-primary: #ffffff;
+  --accent: #ff5a2c;
+  --link: #2e46d9;
+  --link-hover: #2337b3;
+  --grid: #1a1d1f;
+
+  /* Dark call-to-action band */
+  --band: #141414;
+  --band-fg: #f4f6fa;
+  --band-text-2: #b4bac4;
+  --band-border: #6e7177;
+  --band-btn: #f4f6fa;
+  --band-btn-fg: #141414;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --container-max: 1312px;
+  --gutter: clamp(16px, 4vw, 64px);
+  --section-gap: clamp(64px, 7vw, 104px);
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f1115;
+  --nav-bg: rgba(15, 17, 21, 0.92);
+  --surface: #181b21;
+  --surface-muted: #20242c;
+  --border: #2a2f37;
+  --border-strong: #707a8c;
+  --rule: #f2f4f7;
+  --divider: #3a414c;
+
+  --text: #f2f4f7;
+  --text-2: #b4bac4;
+  --muted: #8d95a1;
+
+  --primary: #f2f4f7;
+  --on-primary: #0f1115;
+  --accent: #ff7a52;
+  --link: #8fa2ff;
+  --link-hover: #b4c1ff;
+  --grid: #f2f4f7;
+
+  --band: #1b2130;
+  --band-fg: #f2f4f7;
+  --band-text-2: #b4bac4;
+  --band-border: #707a8c;
+  --band-btn: #f2f4f7;
+  --band-btn-fg: #0f1115;
+
+  color-scheme: dark;
+}

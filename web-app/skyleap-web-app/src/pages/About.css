@@ -1,0 +1,242 @@
+.about-hero {
+  padding-top: clamp(48px, 6vw, 88px);
+  padding-bottom: clamp(56px, 6vw, 88px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 64px;
+  align-items: flex-end;
+}
+
+.about-portrait {
+  flex: 4 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-portrait__img,
+.about-portrait__placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--border);
+}
+
+.about-portrait__img {
+  object-fit: cover;
+}
+
+.about-portrait__placeholder {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--surface-muted) 0px,
+    var(--surface-muted) 10px,
+    var(--border) 10px,
+    var(--border) 11px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-portrait__placeholder span {
+  width: 96px;
+  height: 96px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+}
+
+.about-portrait__caption {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--muted);
+}
+
+.about-hero__copy {
+  flex: 8 1 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-hero__name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(44px, 5.6vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.about-hero__role {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text-2);
+}
+
+.about-hero__intro {
+  max-width: 62ch;
+  font-size: 18px;
+  line-height: 30px;
+  text-wrap: pretty;
+}
+
+.about-hero__secondary {
+  max-width: 62ch;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-2);
+  text-wrap: pretty;
+}
+
+.about-hero__actions {
+  padding-top: 4px;
+}
+
+.about-section {
+  padding-bottom: var(--section-gap);
+}
+
+.about-elsewhere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+/* Skills */
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 32px 48px;
+  padding-top: 24px;
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-group__title {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Experience timeline */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline__period {
+  flex: 0 0 160px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--muted);
+}
+
+.timeline__body {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeline__role {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.timeline__company {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-2);
+}
+
+.timeline__summary {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--text-2);
+}
+
+/* Writing */
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
+  column-gap: 56px;
+}
+
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.writing-card:hover {
+  color: var(--text);
+}
+
+.writing-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.writing-card__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+}
+
+.writing-card__summary {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--text-2);
+}
+
+.writing-card__link {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

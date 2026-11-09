@@ -1,0 +1,26 @@
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tag--muted {
+  padding: 4px 8px;
+  background: var(--surface-muted);
+  color: var(--text-2);
+}
+
+.tag--outline {
+  padding: 6px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+}

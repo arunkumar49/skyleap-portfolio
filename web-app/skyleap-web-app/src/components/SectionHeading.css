@@ -1,0 +1,24 @@
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--rule);
+}
+
+.section-heading__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 2.8vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-heading__aside {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--muted);
+}
