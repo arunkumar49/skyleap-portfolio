@@ -1,0 +1,15 @@
+.patch-grid {
+  width: 100%;
+  display: grid;
+  gap: 3px;
+}
+
+.patch-grid__cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 1px;
+  background: var(--grid);
+}
+
+.patch-grid__cell--query {
+  background: var(--accent);
+}

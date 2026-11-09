@@ -4,7 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>skyleap-web-app</title>
+    <title>Arun Kumar P · Senior Software Engineer</title>
+    <meta
+      name="description"
+      content="Arun Kumar P is a Senior Software Engineer working across .NET, React, machine learning, computer vision and RAG systems on AWS and Azure."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap"
+    />
+    <script>
+      // Apply the saved (or system) theme before first paint to avoid a light flash in dark mode.
+      // Keep the storage key in sync with src/hooks/useTheme.js.
+      (function () {
+        var theme = null
+        try {
+          theme = localStorage.getItem('skyleap-theme')
+        } catch (e) {
+          theme = null
+        }
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+        document.documentElement.dataset.theme = theme
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

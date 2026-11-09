@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aruna Kumara P. · Projects</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2E46D9}a:hover{color:#2337B3}
+</style>
+</helmet>
+<div style="background: #F4F6FA; color: #1A1D1F; font-family: Inter, system-ui, sans-serif">
+
+  <header style="position: sticky; top: 0; z-index: 40; background: rgba(244,246,250,0.94); border-bottom: 1px solid #DDE2E8">
+    <nav aria-label="Primary" style="max-width: 1312px; margin: 0 auto; padding: 10px clamp(16px, 4vw, 64px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
+      <a href="Home.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; color: #1A1D1F">
+        <span style="width: 36px; height: 36px; background: #1A1D1F; color: #FFFFFF; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: -0.02em">AK</span>
+        <span style="font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 17px; letter-spacing: -0.01em">Aruna Kumara P.</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 28px">
+        <a href="Projects.dc.html" aria-current="page" style="font-size: 14px; line-height: 20px; font-weight: 500; color: #1A1D1F; text-decoration: none; padding: 12px 0; border-bottom: 2px solid #FF5A2C">Projects</a>
+        <a href="About.dc.html" style="font-size: 14px; line-height: 20px; font-weight: 500; color: #4A4F52; text-decoration: none; padding: 12px 0; border-bottom: 2px solid transparent">About</a>
+        <a href="Contact.dc.html" style="font-size: 14px; line-height: 20px; font-weight: 500; color: #4A4F52; text-decoration: none; padding: 12px 0; border-bottom: 2px solid transparent">Contact</a>
+        <button type="button" aria-label="Switch to dark theme" style="width: 44px; height: 44px; border: 1px solid #DDE2E8; border-radius: 4px; background: transparent; color: #1A1D1F; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section style="max-width: 1312px; margin: 0 auto; padding: clamp(48px, 6vw, 88px) clamp(16px, 4vw, 64px) 32px; display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 48px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; line-height: 16px; color: #6A6F70">/projects</span>
+          <h1 style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 500; font-size: clamp(40px, 4.4vw, 64px); line-height: 1.0; letter-spacing: -0.035em">Projects</h1>
+        </div>
+        <p style="margin: 0; max-width: 54ch; font-size: 17px; line-height: 28px; color: #4A4F52">A selection of my recent engineering work, spanning generative AI, computer vision and enterprise backend systems, plus the research behind it.</p>
+      </div>
+      <div role="group" aria-label="Filter projects" style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button type="button" aria-pressed="true" style="height: 36px; padding: 0 14px; border: 1px solid #1A1D1F; border-radius: 999px; background: #1A1D1F; color: #FFFFFF; font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 500">All · 5</button>
+        <button type="button" aria-pressed="false" style="height: 36px; padding: 0 14px; border: 1px solid #828A94; border-radius: 999px; background: #FFFFFF; color: #4A4F52; font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 500">Generative AI · 1</button>
+        <button type="button" aria-pressed="false" style="height: 36px; padding: 0 14px; border: 1px solid #828A94; border-radius: 999px; background: #FFFFFF; color: #4A4F52; font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 500">Computer vision · 1</button>
+        <button type="button" aria-pressed="false" style="height: 36px; padding: 0 14px; border: 1px solid #828A94; border-radius: 999px; background: #FFFFFF; color: #4A4F52; font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 500">Backend · 1</button>
+        <button type="button" aria-pressed="false" style="height: 36px; padding: 0 14px; border: 1px solid #828A94; border-radius: 999px; background: #FFFFFF; color: #4A4F52; font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 500">Research · 2</button>
+      </div>
+    </section>
+
+    <section aria-label="Engineering projects" style="max-width: 1312px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 64px) clamp(64px, 7vw, 104px)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 24px">
+
+        <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column">
+          <div style="height: 220px; box-sizing: border-box; background: #E9EDF2; padding: 24px; display: flex; flex-direction: column; justify-content: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; line-height: 14px; color: #4A4F52" aria-hidden="true">
+            <div style="display: flex; align-items: center; gap: 6px"><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #828A94; border-radius: 2px">query</span><span>→</span><span style="padding: 6px 8px; background: #1A1D1F; color: #FFFFFF; border-radius: 2px">router</span><span>→</span></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; padding-left: 48px"><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #1A1D1F; border-radius: 2px">agent · retrieve</span><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #1A1D1F; border-radius: 2px">agent · reason</span><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #1A1D1F; border-radius: 2px">agent · verify</span></div>
+            <div style="display: flex; align-items: center; gap: 6px; padding-left: 96px"><span>→</span><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #828A94; border-radius: 2px">synthesise</span><span>→</span><span style="padding: 6px 8px; background: #1A1D1F; color: #FFFFFF; border-radius: 2px">answer</span></div>
+          </div>
+          <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+            <div style="display: flex; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: #6A6F70"><span>Generative AI</span><span>run/01</span></div>
+            <h2 style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: -0.01em">Agentic RAG pipeline</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 24px; color: #4A4F52">A dynamic retrieval-augmented generation system that uses autonomous agents to route, synthesise and reason over multi-modal document collections.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px">
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">LangChain</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">Python</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">Vector DB</span>
+            </div>
+            <a href="#" style="align-self: flex-start; padding: 10px 0 0; font-size: 15px; line-height: 22px; color: #2E46D9; text-underline-offset: 3px">Read case study →</a>
+          </div>
+        </article>
+
+        <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column">
+          <div style="height: 220px; box-sizing: border-box; background: #E9EDF2; padding: 24px; display: flex; align-items: center" aria-hidden="true">
+            <div style="width: 100%; display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); gap: 3px">
+              <sc-for list="{{ mini }}" as="p" hint-placeholder-count="112">
+                <div style="aspect-ratio: 1 / 1; border-radius: 1px; background: {{ p.bg }}; opacity: {{ p.o }}; box-shadow: {{ p.sh }}"></div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+            <div style="display: flex; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: #6A6F70"><span>Computer vision</span><span>run/02</span></div>
+            <h2 style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: -0.01em">Vision ViT fine-tuning</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 24px; color: #4A4F52">An end-to-end computer vision pipeline that fine-tunes Vision Transformers for complex scene classification, managing heavy data augmentation.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px">
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">PyTorch</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">Hugging Face</span>
+            </div>
+            <a href="#" style="align-self: flex-start; padding: 10px 0 0; font-size: 15px; line-height: 22px; color: #2E46D9; text-underline-offset: 3px">Read case study →</a>
+          </div>
+        </article>
+
+        <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column">
+          <div style="height: 220px; box-sizing: border-box; background: #E9EDF2; padding: 24px; display: flex; flex-direction: column; justify-content: center; gap: 14px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; line-height: 14px; color: #4A4F52" aria-hidden="true">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px"><span style="width: 44px; color: #6A6F70">write</span><span style="padding: 6px 8px; background: #1A1D1F; color: #FFFFFF; border-radius: 2px">command</span><span>→</span><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #1A1D1F; border-radius: 2px">domain model</span><span>→</span><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #828A94; border-radius: 2px">write store</span></div>
+            <div style="height: 1px; background: #B8C0CA"></div>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px"><span style="width: 44px; color: #6A6F70">read</span><span style="padding: 6px 8px; background: #1A1D1F; color: #FFFFFF; border-radius: 2px">query</span><span>→</span><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #1A1D1F; border-radius: 2px">read model</span><span>→</span><span style="padding: 6px 8px; background: #FFFFFF; border: 1px solid #828A94; border-radius: 2px">API</span></div>
+          </div>
+          <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+            <div style="display: flex; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: #6A6F70"><span>Backend</span><span>run/03</span></div>
+            <h2 style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: -0.01em">Enterprise backend system</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 24px; color: #4A4F52">A highly scalable, domain-driven backend using CQRS patterns for high-performance querying and zero-downtime deployments.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px">
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">C#</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">.NET Core</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">Microservices</span>
+            </div>
+            <a href="#" style="align-self: flex-start; padding: 10px 0 0; font-size: 15px; line-height: 22px; color: #2E46D9; text-underline-offset: 3px">Read case study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="res-title" style="max-width: 1312px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 64px) clamp(64px, 7vw, 104px)">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 48px; padding-bottom: 20px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; line-height: 16px; color: #6A6F70">/research</span>
+          <h2 id="res-title" style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 500; font-size: clamp(30px, 3vw, 40px); line-height: 1.15; letter-spacing: -0.02em">Research</h2>
+        </div>
+        <p style="margin: 0; max-width: 52ch; font-size: 16px; line-height: 26px; color: #4A4F52">Exploring the frontiers of machine learning, with a focus on autonomous behaviour and visual understanding.</p>
+      </div>
+      <div style="border-top: 2px solid #1A1D1F">
+        <article style="display: flex; flex-wrap: wrap; gap: 16px 40px; padding: 32px 0; border-bottom: 1px solid #DDE2E8">
+          <span style="flex: 0 0 88px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; line-height: 34px; color: #6A6F70">R/01</span>
+          <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 12px">
+            <h3 style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 500; font-size: 28px; line-height: 34px; letter-spacing: -0.01em">Multi-agent orchestration in RAG systems</h3>
+            <p style="margin: 0; max-width: 68ch; font-size: 16px; line-height: 26px; color: #4A4F52">Investigating paradigms where LLMs move beyond simple generation to become autonomous reasoning engines. This work explores multi-agent orchestration, dynamic tool use and self-correcting retrieval to solve multi-step logical reasoning problems more reliably than zero-shot prompting.</p>
+          </div>
+          <dl style="flex: 0 1 260px; margin: 0; display: flex; flex-direction: column; gap: 8px">
+            <dt style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: #6A6F70">Key focus</dt>
+            <dd style="margin: 0; display: flex; flex-wrap: wrap; gap: 6px">
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">Hallucination mitigation</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">Tool use</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">LangGraph</span>
+            </dd>
+          </dl>
+        </article>
+        <article style="display: flex; flex-wrap: wrap; gap: 16px 40px; padding: 32px 0; border-bottom: 1px solid #DDE2E8">
+          <span style="flex: 0 0 88px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; line-height: 34px; color: #6A6F70">R/02</span>
+          <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 12px">
+            <h3 style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 500; font-size: 28px; line-height: 34px; letter-spacing: -0.01em">Parameter-efficient fine-tuning for ViTs</h3>
+            <p style="margin: 0; max-width: 68ch; font-size: 16px; line-height: 26px; color: #4A4F52">Optimising state-of-the-art vision transformers for domain-specific tasks under constrained compute. The focus is LoRA (low-rank adaptation) applied to vision architectures, handling distribution shift in natural-scene classification, and cross-modal embeddings.</p>
+          </div>
+          <dl style="flex: 0 1 260px; margin: 0; display: flex; flex-direction: column; gap: 8px">
+            <dt style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: #6A6F70">Key focus</dt>
+            <dd style="margin: 0; display: flex; flex-wrap: wrap; gap: 6px">
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">PEFT</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">LoRA</span>
+              <span style="padding: 4px 8px; border-radius: 2px; background: #E9EDF2; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #4A4F52">Attention mechanisms</span>
+            </dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section style="max-width: 1312px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 64px) clamp(64px, 7vw, 104px)">
+      <div style="background: #141414; color: #F4F6FA; border-radius: 8px; padding: clamp(28px, 4vw, 48px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+        <p style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 500; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.2; letter-spacing: -0.02em; max-width: 30ch">Have a problem that needs an agent or a vision model?</p>
+        <a href="Contact.dc.html" style="height: 48px; padding: 0 22px; display: inline-flex; align-items: center; gap: 10px; border-radius: 4px; background: #F4F6FA; color: #1A1D1F; font-size: 15px; font-weight: 500; text-decoration: none">Start a conversation <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top: 1px solid #DDE2E8">
+    <div style="max-width: 1312px; margin: 0 auto; padding: 32px clamp(16px, 4vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 32px">
+      <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 16px; color: #6A6F70">Built by Aruna Kumara P. · Bengaluru · © 2026</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 14px; line-height: 20px">
+        <a href="Projects.dc.html" style="color: #4A4F52; text-decoration: none; padding: 12px 0">Projects</a>
+        <a href="About.dc.html" style="color: #4A4F52; text-decoration: none; padding: 12px 0">About</a>
+        <a href="Contact.dc.html" style="color: #4A4F52; text-decoration: none; padding: 12px 0">Contact</a>
+        <a href="https://www.linkedin.com/" style="color: #4A4F52; text-decoration: none; padding: 12px 0">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2040}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const cols = 16, rows = 7;
+    const blobs = [{ x: 5, y: 3, s: 2.0, w: 1.0 }, { x: 11, y: 2, s: 1.8, w: 0.7 }, { x: 10, y: 5, s: 1.4, w: 0.5 }];
+    let seed = 23;
+    const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+    const mini = [];
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        let v = 0;
+        blobs.forEach((b) => { v += b.w * Math.exp(-((c - b.x) ** 2 + (r - b.y) ** 2) / (2 * b.s * b.s)); });
+        v = Math.min(1, v + rnd() * 0.1);
+        const q = c === 5 && r === 3;
+        mini.push({ o: q ? 1 : (0.06 + 0.94 * v).toFixed(2), bg: q ? '#FF5A2C' : '#1A1D1F', sh: 'none' });
+      }
+    }
+    return { mini };
+  }
+}
+</script>
+</body>
+</html>
