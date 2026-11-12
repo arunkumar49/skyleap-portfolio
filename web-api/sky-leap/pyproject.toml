@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "boto3>=1.43.126",
     "botocore[crt]>=1.43.126",
-    "fastapi>=0.162.2",
+    "fastapi[standard]>=0.162.2",
     "libmagic>=1.0",
     "pinecone>=10.3.0",
     "unstructured[all-docs]>=0.27.37",
@@ -28,3 +28,6 @@ dev = [
     "pytest>=9.2.0",
     "ruff>=0.17.4",
 ]
+
+[tool.fastapi]
+entrypoint = "sky_leap.main:app"

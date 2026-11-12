@@ -18,6 +18,8 @@ class Settings:
     aws_region: str = "ap-south-1"
     embed_model_id: str = "amazon.titan-embed-text-v2:0"
     embed_dimensions: int = 1024
+    chunk_name: str = ""
+    chunk_num: int = 10
 
 
 def _env(name: str, default: str) -> str:
@@ -49,7 +51,9 @@ def get_settings() -> Settings:
         pinecone_api_key=api_key,
         pinecone_index=_env("PINECONE_INDEX", "portfolio-rag"),
         pinecone_namespace=_env("PINECONE_NAMESPACE", "v1"),
-        aws_region=_env("AWS_REGION", "us-east-1"),
+        aws_region=_env("AWS_REGION", "ap-south-1"),
         embed_model_id=_env("EMBED_MODEL_ID", "amazon.titan-embed-text-v2:0"),
         embed_dimensions=dimensions,
+        chunk_name=_env("CHUNK_NAME", ""),
+        chunk_num=int(_env("CHUNK_NUM", "10"))
     )
