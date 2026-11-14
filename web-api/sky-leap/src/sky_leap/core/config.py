@@ -13,13 +13,16 @@ from functools import lru_cache
 @dataclass(frozen=True)
 class Settings:
     pinecone_api_key: str
-    pinecone_index: str = "portfolio-rag"
-    pinecone_namespace: str = "v1"
+    aws_s3_bucket: str
+    bedrock_llm_model_id: str
+    pinecone_index: str
+    pinecone_namespace: str
+    embed_model_id: str
+    chunk_name: str
     aws_region: str = "ap-south-1"
-    embed_model_id: str = "amazon.titan-embed-text-v2:0"
     embed_dimensions: int = 1024
-    chunk_name: str = ""
     chunk_num: int = 10
+    
 
 
 def _env(name: str, default: str) -> str:
@@ -53,7 +56,9 @@ def get_settings() -> Settings:
         pinecone_namespace=_env("PINECONE_NAMESPACE", "v1"),
         aws_region=_env("AWS_REGION", "ap-south-1"),
         embed_model_id=_env("EMBED_MODEL_ID", "amazon.titan-embed-text-v2:0"),
+        bedrock_llm_model_id=_env("LLM_MODEL_ID", "amazon.nova-pro-v1:0"),
         embed_dimensions=dimensions,
         chunk_name=_env("CHUNK_NAME", ""),
-        chunk_num=int(_env("CHUNK_NUM", "10"))
+        chunk_num=int(_env("CHUNK_NUM", "10")),
+        aws_s3_bucket=_env("AWS_S3_BUCKET", "")
     )

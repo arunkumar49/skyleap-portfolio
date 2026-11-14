@@ -1,11 +1,11 @@
 from pathlib import Path
-from sky_leap.repository.vector_store import upsert_vector
+from sky_leap.infrastructure.vector_store.pc_vector_store import upsert_vector
 from sky_leap.services.rag.embedding import get_titan_embedding
 from unstructured.documents.elements import Element
 from unstructured.chunking.title import chunk_by_title
 from unstructured.partition.md import partition_md
 from unstructured.partition.auto import partition
-from sky_leap.config import get_settings
+from sky_leap.core.config import get_settings
 
 config = get_settings()
 

@@ -1,16 +1,9 @@
 import json
 import boto3
-from sky_leap.config import get_settings
+from sky_leap.core.config import get_settings
+from sky_leap.infrastructure.bedrock.aws_bedrock import invoke_bedrock_model
 
 config = get_settings()
-
-
-bedrock_runtime = boto3.client(
-    service_name='bedrock-runtime',
-    region_name= config.aws_region  # Change to your preferred region
-)
-
-
 
 def get_titan_embedding(text: str, dimensions: int = config.embed_dimensions) -> list[float]:
     
@@ -19,11 +12,8 @@ def get_titan_embedding(text: str, dimensions: int = config.embed_dimensions) ->
         "dimensions": dimensions,
         "normalize": True
     })
-    response = bedrock_runtime.invoke_model(
-        modelId=config.embed_model_id,
-        contentType="application/json",
-        accept="application/json",
-        body=body
-    )
+    
+    response = invoke_bedrock_model(body, config.embed_model_id)
+    
     response_body = json.loads(response["body"].read())
     return response_body["embedding"]

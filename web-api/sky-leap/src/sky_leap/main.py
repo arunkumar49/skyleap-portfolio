@@ -1,15 +1,20 @@
 from typing import Any
-
-from fastapi import FastAPI
+from sky_leap.api.v1.endpoints import documents
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+from sky_leap.core.exceptions import StorageError
 
 
 app = FastAPI()
 
+app.include_router(documents.router)
+
+
+@app.exception_handler(StorageError)
+async def storage_error_handler(request: Request, exc: StorageError) -> JSONResponse:
+    return JSONResponse(status_code=502, content={"detail": "Could not store the file"})
+
 
 @app.get("/")
-async def root() -> dict[str, str]:
-    return {"message": "Hello World!"}
-
-@app.get("/items/{item_id}")
-async def read_item(item_id: int) -> dict[str, int | str]:
-    return {"item_id": item_id}
+async def root():
+    return {"message": "Hello Bigger Applications!"}

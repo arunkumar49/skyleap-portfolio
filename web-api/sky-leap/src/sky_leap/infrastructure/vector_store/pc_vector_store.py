@@ -3,7 +3,7 @@ from typing import Any, Sequence
 from pinecone.exceptions import PineconeException
 from pinecone import GrpcIndex, Index, Pinecone, QueryResponse, ServerlessSpec
 from pydantic import conint
-from sky_leap.config import get_settings
+from sky_leap.core.config import get_settings
 import time
 
 config = get_settings()
