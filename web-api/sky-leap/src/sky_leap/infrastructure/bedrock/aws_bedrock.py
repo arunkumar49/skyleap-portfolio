@@ -1,3 +1,4 @@
+import asyncio
 from typing import Any
 import boto3
 from sky_leap.core.config import get_settings
@@ -23,21 +24,22 @@ def invoke_bedrock_model(body: str, model: str) -> dict[str, Any]:
     return response
 
 
-def invoke_converse(context: str, query: str, model_id: str) -> dict[str, Any] | None:
+async def invoke_converse(context: str, query: str, model_id: str) -> dict[str, Any] | None:
     
     try:
-        response = client.converse(
-                        modelId=model_id,
-                        system=[{
-                            "text": "Answer the question using only the provided context. "
-                            "If the answer is not in the context, say you don't know."
-                        }],
-                        messages=[{
-                            "role": "user",
-                            "content": [{"text": f"Context:\n{context}\n\nQuestion: {query}"}],
-                        }],
-                        inferenceConfig={"maxTokens": 512, "temperature": 0.5, "topP": 0.9},
-                    )
+        response = await asyncio.to_thread(
+            client.converse,
+            modelId=model_id,
+            system=[{
+                "text": "Answer the question using only the provided context. "
+                "If the answer is not in the context, say you don't know."
+            }],
+            messages=[{
+                "role": "user",
+                "content": [{"text": f"Context:\n{context}\n\nQuestion: {query}"}],
+            }],
+            inferenceConfig={"maxTokens": 512, "temperature": 0.5, "topP": 0.9},
+        )
         
         return response
         
