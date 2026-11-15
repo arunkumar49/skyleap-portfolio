@@ -9,7 +9,7 @@
 # -----------------------------------------------------------------------------
 .env
 .env.*
-!.env.example
+!.env.e
 *.pem
 *.key
 .secrets/
@@ -86,3 +86,8 @@ Desktop.ini
 
 # Claude Code personal settings (shared .claude/settings.json stays tracked)
 .claude/settings.local.json
+
+# -----------------------------------------------------------------------------
+# Local documentation (RAG source docs, guides) kept out of the repo
+# -----------------------------------------------------------------------------
+docs/
