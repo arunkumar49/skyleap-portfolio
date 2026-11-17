@@ -1,57 +1,78 @@
-from html.entities import name2codepoint
-from typing import Any, Sequence
+from collections.abc import Mapping, Sequence
+from typing import Any
+
+from pinecone import (
+    DenseVectorQuery,
+    Index,
+    Pinecone,
+    SearchDocumentsResponse,
+    TextQuery,
+)
 from pinecone.exceptions import PineconeException
-from pinecone import GrpcIndex, Index, Pinecone, QueryResponse, ServerlessSpec
-from pydantic import conint
+
 from sky_leap.core.config import get_settings
-import time
+from functools import lru_cache
 
 config = get_settings()
 
 pc = Pinecone(api_key=config.pinecone_api_key)
 
+# Field names declared in the index schema. They must match the index created in Pinecone.
+DENSE_FIELD = "embedding"
+TEXT_FIELDS = ["chunk_text", "section_path"]
+RETURN_FIELDS = ["chunk_text", "section_path", "doc_id"]
 
-def _get_index() -> Index | GrpcIndex:
-    
+@lru_cache
+def _get_index() -> Index:
+    # The index has a document schema, so it is created once in the Pinecone console,
+    # not here. Auto-creating it would build an index without the full-text fields.
     if not pc.has_index(config.pinecone_index):
-        pc.create_index(
-            name=config.pinecone_index,
-            dimension=config.embed_dimensions,   # must match Titan output size
-            metric="cosine",        # Titan V2 vectors are normalized by default
-            spec=ServerlessSpec(cloud="aws", region="us-east-1"),
+        raise RuntimeError(
+            f"Pinecone index {config.pinecone_index!r} does not exist. Create it with fields "
+            f"'chunk_text' and 'section_path' (string, full-text search) and "
+            f"'{DENSE_FIELD}' (dense vector, {config.embed_dimensions} dim, cosine)."
         )
-        
-        # wait until the index is ready
-        while not pc.describe_index(config.pinecone_index).status["ready"]:
-            time.sleep(1)
 
-    return pc.Index(config.pinecone_index)
+    return pc.index(name=config.pinecone_index)
 
 
-def upsert_vector(vectors: Sequence[Any], namespace: str):
+def upsert_documents(documents: Sequence[Mapping[str, Any]], namespace: str) -> None:
     try:
         index = _get_index()
-        index.upsert(
-            vectors=vectors,
-            namespace=namespace
+        result = index.documents.batch_upsert(
+            namespace=namespace,
+            documents=documents,
+            show_progress=False,
         )
     except PineconeException as e:
-        raise Exception(f"Failed to upsert the vecotrs into pinecone database {e}")
-    
-    
-def query_vectors(vector: Sequence[Any], namespace: str, top_k: int = config.chunk_num, meta_filter: dict = {}) -> QueryResponse:
+        raise Exception(f"Failed to upsert the documents into pinecone database {e}")
+
+    if result.has_errors:
+        failed_ids = [doc.get("_id") for doc in result.failed_items]
+        raise Exception(f"Failed to upsert {len(failed_ids)} documents into pinecone database: {failed_ids}")
+
+
+def search_dense(vector: Sequence[float], namespace: str, top_k: int) -> SearchDocumentsResponse:
     try:
         index = _get_index()
-        
-        vectors = index.query(
-                    namespace=namespace,
-                    vector=vector,
-                    top_k=top_k,
-                    include_metadata=True,
-                    include_values=True,
-                    filter=meta_filter
-                )
-        
-        return vectors
+        return index.documents.search(
+            namespace=namespace,
+            score_by=[DenseVectorQuery(field=DENSE_FIELD, values=list(vector))],
+            top_k=top_k,
+            include_fields=RETURN_FIELDS,
+        )
     except PineconeException as e:
-        raise Exception(f"Failed to query the vecotrs from pinecone database {e}")
+        raise Exception(f"Failed to run dense search in pinecone database {e}")
+
+
+def search_text(query: str, namespace: str, top_k: int) -> SearchDocumentsResponse:
+    try:
+        index = _get_index()
+        return index.documents.search(
+            namespace=namespace,
+            score_by=[TextQuery(query=query, fields=TEXT_FIELDS)],
+            top_k=top_k,
+            include_fields=RETURN_FIELDS,
+        )
+    except PineconeException as e:
+        raise Exception(f"Failed to run full-text search in pinecone database {e}")

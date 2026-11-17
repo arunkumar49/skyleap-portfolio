@@ -22,6 +22,8 @@ class Settings:
     aws_region: str = "ap-south-1"
     embed_dimensions: int = 1024
     chunk_num: int = 10
+    retrieval_candidates: int = 20
+    rrf_k: int = 60
     
 
 
@@ -60,5 +62,7 @@ def get_settings() -> Settings:
         embed_dimensions=dimensions,
         chunk_name=_env("CHUNK_NAME", ""),
         chunk_num=int(_env("CHUNK_NUM", "10")),
-        aws_s3_bucket=_env("AWS_S3_BUCKET", "")
+        aws_s3_bucket=_env("AWS_S3_BUCKET", ""),
+        retrieval_candidates=int(_env("RETRIEVAL_CANDIDATES", "20")),
+        rrf_k=int(_env("RRF_K", "60")),
     )

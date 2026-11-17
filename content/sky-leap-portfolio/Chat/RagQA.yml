@@ -6,6 +6,12 @@ info:
 http:
   method: POST
   url: http://127.0.0.1:8000/chat/query
+  body:
+    type: json
+    data: |-
+      {
+        "question": "Is Arun a good engineer?"
+      }
   auth: inherit
 
 settings:

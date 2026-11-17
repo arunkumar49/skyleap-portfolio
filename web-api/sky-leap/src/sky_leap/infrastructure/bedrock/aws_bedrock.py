@@ -38,7 +38,7 @@ async def invoke_converse(context: str, query: str, model_id: str) -> dict[str, 
                 "role": "user",
                 "content": [{"text": f"Context:\n{context}\n\nQuestion: {query}"}],
             }],
-            inferenceConfig={"maxTokens": 512, "temperature": 0.5, "topP": 0.9},
+            inferenceConfig={"maxTokens": 512, "temperature": 0.1, "topP": 0.9},
         )
         
         return response

@@ -1,5 +1,5 @@
 from pathlib import Path
-from sky_leap.infrastructure.vector_store.pc_vector_store import upsert_vector
+from sky_leap.infrastructure.vector_store.pc_vector_store import upsert_documents
 from sky_leap.services.rag.embedding import get_titan_embedding
 from unstructured.documents.elements import Element
 from unstructured.chunking.title import chunk_by_title
@@ -76,8 +76,7 @@ def chunk_document(file_path: str) -> list[Element]:
 
 def embed_file(file: str, namespace: str):
     # 3. Embed each Element and keep its metadata for your vector DB
-    embedded_records = []
-    vectors = []
+    documents = []
     
     chunks = chunk_document(file)
     
@@ -88,24 +87,24 @@ def embed_file(file: str, namespace: str):
     
         text_to_embed = chunk.text
         vector = get_titan_embedding(text_to_embed)
-        vectors.append(vector)
-        # print(vector)
 
-        embedded_records.append({
-            "id": f"{chunk.metadata.doc_id}#{chunk.metadata.chunk_index}",
-            "values": vector,
-            "metadata": _to_pinecone_metadata(chunk, chunk.text),
-        })
-    upsert_vector(vectors=embedded_records, namespace=namespace)
-    
-    # print(f"Embedded {embedded_records} chunks.")
+        documents.append(_to_document(chunk, vector))
+
+    if not documents:  # empty file: nothing to upsert
+        return
+
+    upsert_documents(documents=documents, namespace=namespace)
 
 
-def _to_pinecone_metadata(chunk, text: str) -> dict:
+def _to_document(chunk, vector: list[float]) -> dict:
+    """Build a Pinecone document: schema fields (_id, embedding, chunk_text,
+    section_path) plus the remaining metadata, which stays filterable."""
     raw = chunk.metadata.to_dict()
-    meta = {k: raw[k] for k in METADATA_FIELDS if raw.get(k) is not None}
-    meta["text"] = text
-    return meta
+    document = {k: raw[k] for k in METADATA_FIELDS if raw.get(k) is not None}
+    document["_id"] = f"{chunk.metadata.doc_id}#{chunk.metadata.chunk_index}"
+    document["embedding"] = vector
+    document["chunk_text"] = chunk.text
+    return document
 
 
 def _add_heading_metadata(chunks: list[Element], file: str | Path) -> None:
@@ -145,4 +144,3 @@ def _add_heading_metadata(chunks: list[Element], file: str | Path) -> None:
             chunk.metadata.section_path = " > ".join(context[d] for d in sorted(context))
         if headings:
             chunk.metadata.headings = headings
-

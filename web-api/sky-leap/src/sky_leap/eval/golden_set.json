@@ -1,0 +1,425 @@
+[
+  {
+    "id": "q01",
+    "question": "What is Arun's current role and which company does he work for?",
+    "expected_answer": "Senior Software Engineer and Team Lead at Scalian Group India (which acquired Yucca IT Solutions).",
+    "expected_doc": [
+      "career-skills.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q02",
+    "question": "When and where did Arun start his career?",
+    "expected_answer": "In 2022, as a Trainee Software Engineer at Yucca IT Solutions.",
+    "expected_doc": [
+      "career-skills.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q03",
+    "question": "How long was Arun a trainee before he was promoted?",
+    "expected_answer": "About six months, after which he was promoted to Software Engineer.",
+    "expected_doc": [
+      "career-skills.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q04",
+    "question": "What engineering degree does Arun have and from which college?",
+    "expected_answer": "A Bachelor of Engineering (B.E.) in Electronics and Communication Engineering (ECE) from Dayananda Sagar College of Engineering, Bengaluru.",
+    "expected_doc": [
+      "early-life-education.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q05",
+    "question": "Which stream did Arun study in Pre-University?",
+    "expected_answer": "PCMB (Physics, Chemistry, Mathematics, Biology) at Government Pre-University College, Soraba.",
+    "expected_doc": [
+      "early-life-education.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q06",
+    "question": "Where is Arun from?",
+    "expected_answer": "Chithrattehalli, Sorab (Soraba), in Shivamogga district, Karnataka, India.",
+    "expected_doc": [
+      "early-life-education.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q07",
+    "question": "What is Arun's mother tongue?",
+    "expected_answer": "Kannada. He also speaks English.",
+    "expected_doc": [
+      "early-life-education.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q08",
+    "question": "What is Arun's biggest project?",
+    "expected_answer": "The mailroom and shipping management system: worked on since 2023, more than 200 commits, including the full UPS REST API integration.",
+    "expected_doc": [
+      "projects-overview.md",
+      "project-mailroom-shipping-system.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q09",
+    "question": "Which shipping carriers are integrated in the mailroom system?",
+    "expected_answer": "UPS, DPD and Swiss Post, plus internal delivery.",
+    "expected_doc": [
+      "project-mailroom-shipping-system.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q10",
+    "question": "Which model was finally chosen for the food recommendation system?",
+    "expected_answer": "A LightGBM learning-to-rank model, with recommendations precomputed nightly.",
+    "expected_doc": [
+      "project-food-recommendation-system.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q11",
+    "question": "What is the real security boundary in Arun's MCP server?",
+    "expected_answer": "A read-only SQL login, which cannot insert, update, delete or change the schema even if every other layer fails.",
+    "expected_doc": [
+      "project-mcp-server-ai-agents.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q12",
+    "question": "Which AI coding tools work with Arun's MCP server?",
+    "expected_answer": "Claude Code, GitHub Copilot Agent, Codex and any other MCP client.",
+    "expected_doc": [
+      "project-mcp-server-ai-agents.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q13",
+    "question": "What layers does the house price prediction API use?",
+    "expected_answer": "Clean architecture with domain, application, infrastructure and presentation layers.",
+    "expected_doc": [
+      "project-house-price-prediction-api.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q14",
+    "question": "Has Arun migrated a database? When?",
+    "expected_answer": "Yes. In 2023 he migrated .NET applications from Oracle to SQL Server.",
+    "expected_doc": [
+      "project-legacy-modernization-security.md",
+      "tech-sql-server.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q15",
+    "question": "What is Arun's featured computer vision project?",
+    "expected_answer": "A Product Image Tagging Application whose vision model he developed and trained on AWS SageMaker.",
+    "expected_doc": [
+      "career-skills.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q16",
+    "question": "What workflow does Arun follow when solving problems?",
+    "expected_answer": "Research, Plan, Implement (RPI): understand and reproduce the problem, agree on a plan, then implement in small tested steps.",
+    "expected_doc": [
+      "problem-solving-approach.md",
+      "ai-assisted-development-claude-code.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q17",
+    "question": "What are the parts of Arun's CLAUDE.md?",
+    "expected_answer": "Seven parts: context/confidentiality, the RPI workflow, learning from mistakes, engineering standards, safety and Git, career growth, and communication.",
+    "expected_doc": [
+      "ai-assisted-development-claude-code.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q18",
+    "question": "What front-end technology does the visitor and badge system use?",
+    "expected_answer": "Angular with TypeScript.",
+    "expected_doc": [
+      "project-visitor-badge-access.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q19",
+    "question": "What bug did Arun fix in business continuity mode of the visitor system?",
+    "expected_answer": "Badge validity was not updated for contractors (artisans) in BCP mode, so their badges kept the wrong end date.",
+    "expected_doc": [
+      "project-visitor-badge-access.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q20",
+    "question": "Which databases has Arun used?",
+    "expected_answer": "SQL Server most of all, plus Oracle, PostgreSQL and Redis.",
+    "expected_doc": [
+      "tech-sql-server.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q21",
+    "question": "Who is Arun's client?",
+    "expected_answer": "A large enterprise client in Switzerland, through Scalian Group India (formerly Yucca IT Solutions). The client's name is confidential.",
+    "expected_doc": [
+      "projects-overview.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q22",
+    "question": "Since when has Arun written production PowerShell jobs?",
+    "expected_answer": "Since 2024.",
+    "expected_doc": [
+      "tech-powershell-automation.md",
+      "project-automation-integration-jobs.md"
+    ],
+    "type": "factual"
+  },
+  {
+    "id": "q23",
+    "question": "Which of Arun's projects used FastAPI?",
+    "expected_answer": "The food recommendation system and the house price prediction API; he has also built FastAPI backends for RAG systems.",
+    "expected_doc": [
+      "project-food-recommendation-system.md",
+      "project-house-price-prediction-api.md"
+    ],
+    "type": "multi_chunk"
+  },
+  {
+    "id": "q24",
+    "question": "In which projects did Arun use PowerShell?",
+    "expected_answer": "The automation and integration jobs (CRM imports, anonymisation, daily product feed, SAP interface) and the visitor/access work (door alert and unreviewed-door report jobs).",
+    "expected_doc": [
+      "project-automation-integration-jobs.md",
+      "project-visitor-badge-access.md"
+    ],
+    "type": "multi_chunk"
+  },
+  {
+    "id": "q25",
+    "question": "Which projects involved protecting personal data?",
+    "expected_answer": "Visitor data anonymisation in the badge system, the CRM data anonymisation job, and removing connection strings and confidential information from logs in legacy applications.",
+    "expected_doc": [
+      "project-visitor-badge-access.md",
+      "project-automation-integration-jobs.md",
+      "project-legacy-modernization-security.md"
+    ],
+    "type": "multi_chunk"
+  },
+  {
+    "id": "q26",
+    "question": "How does Arun's education connect to the hardware work he did on the shipping system?",
+    "expected_answer": "He has a B.E. in Electronics and Communication Engineering, and on the mailroom system he added diagnostics for and fixed weighing scales and label printers.",
+    "expected_doc": [
+      "early-life-education.md",
+      "project-mailroom-shipping-system.md"
+    ],
+    "type": "multi_chunk"
+  },
+  {
+    "id": "q27",
+    "question": "Describe Arun's path from his degree to his current job.",
+    "expected_answer": "B.E. in ECE from Dayananda Sagar College of Engineering, then Trainee Software Engineer at Yucca IT Solutions in 2022, Software Engineer about six months later, and now Senior Software Engineer and Team Lead at Scalian Group India after the acquisition.",
+    "expected_doc": [
+      "early-life-education.md",
+      "career-skills.md"
+    ],
+    "type": "multi_chunk"
+  },
+  {
+    "id": "q28",
+    "question": "How did Arun use diagnostic logs to fix the weighing scale and printer issues, and how does that reflect his problem-solving approach?",
+    "expected_answer": "He added extended scale diagnostics and printer diagnostics logs (which revealed a missing local printer configuration) and only fixed things once the root cause was clear, matching his Research step of adding diagnostics before guessing.",
+    "expected_doc": [
+      "project-mailroom-shipping-system.md",
+      "problem-solving-approach.md"
+    ],
+    "type": "multi_chunk"
+  },
+  {
+    "id": "q29",
+    "question": "What is Arun's salary?",
+    "expected_answer": "REFUSE",
+    "expected_doc": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": "q30",
+    "question": "What is Arun's email address or phone number?",
+    "expected_answer": "REFUSE",
+    "expected_doc": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": "q31",
+    "question": "What is the name of the Swiss company Arun works for as a client?",
+    "expected_answer": "REFUSE",
+    "expected_doc": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": "q32",
+    "question": "Which AWS or Azure certifications does Arun hold?",
+    "expected_answer": "REFUSE",
+    "expected_doc": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": "q33",
+    "question": "How old is Arun and what is his date of birth?",
+    "expected_answer": "REFUSE",
+    "expected_doc": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": "q34",
+    "question": "What grade or CGPA did Arun get in his engineering degree?",
+    "expected_answer": "REFUSE",
+    "expected_doc": [],
+    "type": "unanswerable"
+  },
+  {
+    "id": "q35",
+    "question": "sqlglot query guard EXEC SELECT INTO",
+    "expected_answer": "The MCP server's sqlglot query guard allows only one SELECT statement and rejects stacked statements, data and schema changes, EXEC and SELECT ... INTO.",
+    "expected_doc": [
+      "project-mcp-server-ai-agents.md"
+    ],
+    "type": "keyword"
+  },
+  {
+    "id": "q36",
+    "question": "What did Arun do for the DAP Incoterm in the UPS integration?",
+    "expected_answer": "He extended a special service to the DAP (Delivered At Place) Incoterm.",
+    "expected_doc": [
+      "project-mailroom-shipping-system.md"
+    ],
+    "type": "keyword"
+  },
+  {
+    "id": "q37",
+    "question": "DPD truncation rules global constants",
+    "expected_answer": "Arun reworked the DPD address truncation rules so shipments are not rejected, and moved the field lengths into global constants.",
+    "expected_doc": [
+      "project-mailroom-shipping-system.md"
+    ],
+    "type": "keyword"
+  },
+  {
+    "id": "q38",
+    "question": "Does Arun use PSI, Prometheus and Alertmanager?",
+    "expected_answer": "Yes. The food recommendation system monitors data drift with PSI (Population Stability Index) and uses Prometheus, Alertmanager and Grafana for monitoring and alerts.",
+    "expected_doc": [
+      "project-food-recommendation-system.md"
+    ],
+    "type": "keyword"
+  },
+  {
+    "id": "q39",
+    "question": "Has Arun used SSDT?",
+    "expected_answer": "Yes. He introduced an SSDT (SQL Server Data Tools) database project so the schema is versioned in source control with the code.",
+    "expected_doc": [
+      "project-legacy-modernization-security.md",
+      "tech-sql-server.md"
+    ],
+    "type": "keyword"
+  },
+  {
+    "id": "q40",
+    "question": "Why does the MCP server use fetchmany?",
+    "expected_answer": "As a row cap, to limit memory use and how much data goes into the AI's context window.",
+    "expected_doc": [
+      "project-mcp-server-ai-agents.md"
+    ],
+    "type": "keyword"
+  },
+  {
+    "id": "q41",
+    "question": "Does Arun use Cookiecutter Data Science?",
+    "expected_answer": "Yes. He uses structured templates like Cookiecutter Data Science, keeps notebooks for experiments only, and puts reusable logic in a Python package.",
+    "expected_doc": [
+      "tech-python-machine-learning.md"
+    ],
+    "type": "keyword"
+  },
+  {
+    "id": "q42",
+    "question": "How does he stop an AI assistant from accidentally wiping a database?",
+    "expected_answer": "Through his MCP server's layers: a read-only SQL login, read-only connection intent, a sqlglot query guard that allows only a single SELECT, timeouts, row caps, allow/deny lists and an audit log.",
+    "expected_doc": [
+      "project-mcp-server-ai-agents.md"
+    ],
+    "type": "paraphrased"
+  },
+  {
+    "id": "q43",
+    "question": "What did he do about passwords sitting in plain text in old codebases?",
+    "expected_answer": "He removed hardcoded passwords from code and connection strings, removed connection strings and confidential data from logs, and moved values into configuration.",
+    "expected_doc": [
+      "project-legacy-modernization-security.md"
+    ],
+    "type": "paraphrased"
+  },
+  {
+    "id": "q44",
+    "question": "Can a guest get building access without a physical card being printed?",
+    "expected_answer": "Yes. Arun built the backend for a no-print badge option, where a badge is issued without printing a physical card.",
+    "expected_doc": [
+      "project-visitor-badge-access.md"
+    ],
+    "type": "paraphrased"
+  },
+  {
+    "id": "q45",
+    "question": "What happens if the meal suggestion engine is unsure whether a dish is safe for someone with an allergy?",
+    "expected_answer": "Allergen and diet rules fail closed: if the system is unsure a dish is safe, it does not recommend it.",
+    "expected_doc": [
+      "project-food-recommendation-system.md"
+    ],
+    "type": "paraphrased"
+  },
+  {
+    "id": "q46",
+    "question": "What did his parents do for a living?",
+    "expected_answer": "Both his mother and father are farmers; he comes from a small farming family.",
+    "expected_doc": [
+      "early-life-education.md"
+    ],
+    "type": "paraphrased"
+  },
+  {
+    "id": "q47",
+    "question": "When a bug shows up, does he just patch whatever is visibly broken?",
+    "expected_answer": "No. He fixes the root cause, not the symptom: reproduce, add diagnostics, compare options, then add a test that would have caught the bug.",
+    "expected_doc": [
+      "problem-solving-approach.md"
+    ],
+    "type": "paraphrased"
+  }
+]
