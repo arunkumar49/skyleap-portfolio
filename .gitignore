@@ -46,6 +46,8 @@ pip-wheel-metadata/
 coverage.xml
 htmlcov/
 .ipynb_checkpoints/
+# Per-run retrieval eval output
+**/eval/results/
 
 # -----------------------------------------------------------------------------
 # Node / React (Vite) frontend

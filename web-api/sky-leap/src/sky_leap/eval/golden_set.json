@@ -387,15 +387,6 @@
     "type": "paraphrased"
   },
   {
-    "id": "q44",
-    "question": "Can a guest get building access without a physical card being printed?",
-    "expected_answer": "Yes. Arun built the backend for a no-print badge option, where a badge is issued without printing a physical card.",
-    "expected_doc": [
-      "project-visitor-badge-access.md"
-    ],
-    "type": "paraphrased"
-  },
-  {
     "id": "q45",
     "question": "What happens if the meal suggestion engine is unsure whether a dish is safe for someone with an allergy?",
     "expected_answer": "Allergen and diet rules fail closed: if the system is unsure a dish is safe, it does not recommend it.",

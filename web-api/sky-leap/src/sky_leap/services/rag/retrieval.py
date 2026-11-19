@@ -17,6 +17,7 @@ class RetrievedChunk:
     id: str
     chunk_text: str
     section_path: str | None
+    doc_id: str | None
     score: float
 
 
@@ -55,6 +56,7 @@ def retrieve(query: str, top_n: int = 3) -> list[RetrievedChunk]:
             id=doc.id,
             chunk_text=doc.get("chunk_text") or "",
             section_path=doc.get("section_path"),
+            doc_id=doc.get("doc_id"),
             score=score,
         )
         for doc, score in fused[:top_n]
